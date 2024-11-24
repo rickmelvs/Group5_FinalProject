@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Group 5 - CPE212 Final Project</title>
+	<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Lexend, sans-serif;
+            background: url('pixel.gif') no-repeat center center fixed;
+            background-size: cover;
+            color: #fcfcfc;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+            padding: 50px;
+            background: rgba(105, 51, 94, 0.404);
+            border-radius: 20px;
+            box-shadow: 0 4px 0px rgba(0, 0, 0, 0.3);
+        }
+
+        .header h1 {
+            font-size: 36px;
+            color: #f8f7f7;
+            margin: 0;
+        }
+
+        .header p {
+            font-size: 18px;
+            color: #f5f2f2;
+            margin: 5px 0 0;
+        }
+
+        .container {
+            background: rgba(105, 51, 94, 0.404);
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .name {
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .activities {
+            list-style-type: none;
+            padding: 0;
+            color: #faf8f8;
+        }
+
+        .activity {
+            background-color: #5c2f4b;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+            position: relative;
+        }
+
+        .activity:hover {
+            background-color: #deb5e4;
+            color: #C71585; /* Red Violet */
+        }
+
+        .activity span.arrow {
+            float: right;
+            font-weight: bold;
+        }
+
+        .dropdown {
+            display: none;
+            margin-top: 10px;
+            padding-left: 15px;
+        }
+
+        .dropdown a {
+            display: block;
+            text-decoration: none;
+            color: #fffdfd;
+            padding: 5px 0;
+            transition: color 0.3s;
+        }
+
+        .dropdown a:hover {
+            color: #C71585; /* Red Violet */
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Group 5</h1>
+        <p>CPE212 Final Project</p>
+    </div>
+
+    <div class="container">
+        <div>
+            <div class="name">Rick Alcoseba</div>
+            <ul class="activities">
+                <p>PRELIM ACTIVITIES</p>
+                <li class="activity" onclick="toggleDropdown(this)">ACTIVITY 1 <span class="arrow">▶</span>
+                    <div class="dropdown">
+                        <iframe src="https://drive.google.com/file/d/1XITDzIf19R1NEhVK4fvtdRuwehiqYHaQ/preview" width="300" height="400"></iframe>
+                    </div>
+                </li>
+                <li class="activity" onclick="toggleDropdown(this)">ACTIVITY 2<span class="arrow">▶</span>
+                    <div class="dropdown">
+                        <iframe src="https://drive.google.com/file/d/1cYV4JOjhGUdRkPcQMJ7TxiLLRwHtnDXf/preview" width="300" height="400"></iframe>
+                    </div> 
+                </li>
+                <li class="activity" onclick="toggleDropdown(this)">ACTIVITY 3<span class="arrow">▶</span>
+                    <div class="dropdown">
+                        <iframe src="https://drive.google.com/file/d/18hjEA2lwPp2Xec9_sTK7EF9ITrNPdBrU/preview" width="300" height="400"></iframe>
+                    </div> 
+                </li>
+                <li class="activity" onclick="toggleDropdown(this)">ACTIVITY 4<span class="arrow">▶</span>
+                    <div class="dropdown">
+                        <iframe src="https://drive.google.com/file/d/1SjzXL3snK8j2PoRSopZhFt40vF67ntau/preview" width="300" height="400"></iframe>
+                    </div> 
+                </li>
+                <li class="activity" onclick="toggleDropdown(this)">ACTIVITY 5<span class="arrow">▶</span>
+                    <div class="dropdown">    
+                        <iframe src="https://drive.google.com/file/d/17MWsLSNrdz016dnPbIv9GTFnbMD86uhR/preview" width="300" height="400"></iframe>
+                    </div> 
+                </li>
+
+                <p>MIDTERM ACTIVITIES</p>
+                <li class="activity" onclick="toggleDropdown(this)">ACTIVITY 6<span class="arrow">▶</span>
+                    <div class="dropdown">
+                        <iframe src="https://drive.google.com/file/d/1yV9YWtNj3Ap0ztMF1vUkj2EmkuhApe62/preview" width="300" height="400"></iframe>
+                    </div>
+                </li>
+                <li class="activity" onclick="toggleDropdown(this)">ACTIVITY 7<span class="arrow">▶</span>
+                    <div class="dropdown">
+                        <iframe src="https://drive.google.com/file/d/1SEsFmVBxsezjYKsw2VdxBpx_zi0hNmUq/preview" width="300" height="400"></iframe>
+                    </div>
+                </li>
+                <li class="activity" onclick="toggleDropdown(this)">ACTIVITY 8<span class="arrow">▶</span>
+                    <div class="dropdown">
+                        <iframe src="https://drive.google.com/file/d/1dbbUYvtI47kXJZmqxYSpQ2tacWUy9TpU/preview" width="300" height="400"></iframe>
+                    </div>
+                </li>
+                <li class="activity" onclick="toggleDropdown(this)">ACTIVITY 9<span class="arrow">▶</span>
+                    <div class="dropdown">
+                        <iframe src="https://drive.google.com/file/d/11PsQgC3PBaT4s-rVYFKXnRgXf8Yc86Zr/preview" width="300" height="400"></iframe>
+                    </div>
+                </li>
+                <li class="activity" onclick="toggleDropdown(this)">ACTIVITY 10<span class="arrow">▶</span>
+                    <div class="dropdown">
+                        <iframe src="https://drive.google.com/file/d/1yD_Yg82R14z3yf3Gao0Q4WmuODDREVep/preview" width="300" height="400"></iframe>
+                    </div>
+                </li>
+
+                <p>FINALS ACTIVITIES</p>
+                <li class="activity" onclick="toggleDropdown(this)">ACTIVITY 11<span class="arrow">▶</span>
+                    <div class="dropdown">
+                        <iframe src="https://drive.google.com/file/d/1pXF6FWrBnXhfXDN9-wVxPEGslxE1y4oQ/preview" width="300" height="400"></iframe>
+                    </div>
+                </li>
+
+                <p>EXAMINATIONS</p>
+                <li class="activity" onclick="toggleDropdown(this)">Prelim Exam <span class="arrow">▶</span>
+                    <div class="dropdown">
+                        <iframe src="https://drive.google.com/file/d/1taupO1ETVDSNz_ZOeAa7wkaUCIxoBRvc/preview" width="300" height="400"></iframe>
+                    </div>
+                </li>
+
+                <li class="activity" onclick="toggleDropdown(this)">Midterm Exam <span class="arrow">▶</span>
+                    <div class="dropdown">
+                        <iframe src="https://drive.google.com/file/d/1sCOROYKs3q7jdE_Rj3wTcNwgJrUbOVjG/preview" width="300" height="400"></iframe>
+                    </div>
+                </li>
+
+                <li class="activity" onclick="toggleDropdown(this)">Finals Exam <span class="arrow">▶</span>
+                    <div class="dropdown">
+                        <iframe src="No Activity yet" width="500" height="400"></iframe>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        
+        <div>
+            <div class="name">Jennifer Barquilla</div>
+            <ul class="activities">
+
+                <p>PRELIM ACTIVITIES</p>
+                <li class="activity" onclick="toggleDropdown(this)">ACTIVITY 1 <span class="arrow">▶</span>
+                    <div class="dropdown">
+                        <iframe src="https://drive.google.com/file/d/1JvxkHxn-XGtLxAMiu4qp4v7yzjLqtR75/preview" width="300" height="400"></iframe>
+                    </div>
+                </li>
+                <li class="activity" onclick="toggleDropdown(this)">ACTIVITY 2<span class="arrow">▶</span>
+                    <div class="dropdown">
+                        <iframe src="https://drive.google.com/file/d/16vf-9jr-jkc8lNPdILOha1RctYXIGmu-/preview" width="300" height="400"></iframe>
+                    </div> 
+                </li>
+                <li class="activity" onclick="toggleDropdown(this)">ACTIVITY 3<span class="arrow">▶</span>
+                    <div class="dropdown">
+                        <iframe src="https://drive.google.com/file/d/17n2PHH8V1_Oahqaep57lcGTVTne0kE-4/preview" width="300" height="400"></iframe>
+                    </div> 
+                </li>
+                <li class="activity" onclick="toggleDropdown(this)">ACTIVITY 4<span class="arrow">▶</span>
+                    <div class="dropdown">
+                        <iframe src="https://drive.google.com/file/d/1X2BGXdEgHKd5qI7Azl9bn3wKeEwawzKa/preview" width="300" height="400"></iframe>
+                    </div> 
+                </li>
+                <li class="activity" onclick="toggleDropdown(this)">ACTIVITY 5<span class="arrow">▶</span>
+                    <div class="dropdown">    
+                        <iframe src="https://drive.google.com/file/d/1U3GqukZZBvF_nLuLpmOX-CvW2t8eAnnQ/preview" width="300" height="400"></iframe>
+                    </div> 
+                </li>
+
+                <p>MIDTERM ACTIVITIES</p>
+                <li class="activity" onclick="toggleDropdown(this)">ACTIVITY 6<span class="arrow">▶</span>
+                    <div class="dropdown">
+                        <iframe src="https://drive.google.com/file/d/1SO5i2tVH44xPgmpH4WlS7z2r1Vfijdcz/preview" width="300" height="400"></iframe>
+                    </div>
+                </li>
+                <li class="activity" onclick="toggleDropdown(this)">ACTIVITY 7<span class="arrow">▶</span>
+                    <div class="dropdown">
+                        <iframe src="https://drive.google.com/file/d/1Qx7V_tdf_0MLzjU7wRTlio75Hu4o3c2h/preview" width="300" height="400"></iframe>
+                    </div>
+                </li>
+                <li class="activity" onclick="toggleDropdown(this)">ACTIVITY 8<span class="arrow">▶</span>
+                    <div class="dropdown">
+                        <iframe src="https://drive.google.com/file/d/13nzYbOp72Bu4YwFbxKaoadX-WEzHxOXt/preview" width="300" height="400"></iframe>
+                    </div>
+                </li>
+                <li class="activity" onclick="toggleDropdown(this)">ACTIVITY 9<span class="arrow">▶</span>
+                    <div class="dropdown">
+                        <iframe src="https://drive.google.com/file/d/1eJj7CGrQIQhv_UvLKqniFKt1HJNFxjMi/preview" width="300" height="400"></iframe>
+                    </div>
+                </li>
+                <li class="activity" onclick="toggleDropdown(this)">ACTIVITY 10<span class="arrow">▶</span>
+                    <div class="dropdown">
+                        <iframe src="https://drive.google.com/file/d/1TOHKfGm4ZyhUVAp3mk-Tj_2mK5lr-Hju/preview" width="300" height="400"></iframe>
+                    </div>
+                </li>
+
+                <p>FINALS ACTIVITIES</p>
+                <li class="activity" onclick="toggleDropdown(this)">ACTIVITY 11<span class="arrow">▶</span>
+                    <div class="dropdown">
+                        <iframe src="https://drive.google.com/file/d/1x5UjVoqsji1l0LwtO5ReoS8OtsuR7qrt/preview" width="300" height="400"></iframe>
+                    </div>
+                </li>
+
+                <p>EXAMINATIONS</p>
+                <li class="activity" onclick="toggleDropdown(this)">Prelim Exam <span class="arrow">▶</span>
+                    <div class="dropdown">
+                        <iframe src="https://drive.google.com/file/d/1LkEqJlKpTfJlvwTJxPdAiHd3l82nBhIk/preview" width="300" height="400"></iframe>
+                    </div>
+                </li>
+
+                <li class="activity" onclick="toggleDropdown(this)">Midterm Exam <span class="arrow">▶</span>
+                    <div class="dropdown">
+                        <iframe src="https://drive.google.com/file/d/14WhDeCDFUBLh6oB2wHusMXiTZFkseNZw/preview" width="300" height="400"></iframe>
+                    </div>
+                </li>
+
+                <li class="activity" onclick="toggleDropdown(this)">Finals Exam <span class="arrow">▶</span>
+                    <div class="dropdown">
+                        <iframe src="No Activity yet" width="500" height="400"></iframe>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <div class="name">Cristine Gura</div>
+            <ul class="activities">
+                <p>PRELIM ACTIVITIES</p>
+                <li class="activity" onclick="toggleDropdown(this)">ACTIVITY 1 <span class="arrow">▶</span>
+                    <div class="dropdown">
+                        <iframe src="https://drive.google.com/file/d/1kauEsj9bLQfJrHaH_IN2J_ArvduyTPua/preview" width="300" height="400"></iframe>
+                    </div>
+                </li>
+                <li class="activity" onclick="toggleDropdown(this)">ACTIVITY 2<span class="arrow">▶</span>
+                    <div class="dropdown">
+                        <iframe src="https://drive.google.com/file/d/1Q7j6n2oh9WvtbzZ_YMX7KTWgc2uGw0r1/preview" width="300" height="400"></iframe>
+                    </div> 
+                </li>
+                <li class="activity" onclick="toggleDropdown(this)">ACTIVITY 3<span class="arrow">▶</span>
+                    <div class="dropdown">
+                        <iframe src="https://drive.google.com/file/d/1VH1BxPUDqsD8vo4eRn2aKEJZXXWx0GHc/preview" width="300" height="400"></iframe>
+                    </div> 
+                </li>
+                <li class="activity" onclick="toggleDropdown(this)">ACTIVITY 4<span class="arrow">▶</span>
+                    <div class="dropdown">
+                        <iframe src="https://drive.google.com/file/d/1IN5nIAZjm9RuFf2Chv3BMtlfWCafdsxw/preview" width="300" height="400"></iframe>
+                    </div> 
+                </li>
+                <li class="activity" onclick="toggleDropdown(this)">ACTIVITY 5<span class="arrow">▶</span>
+                    <div class="dropdown">    
+                        <iframe src="https://drive.google.com/file/d/1w2cL8O_APS7O6DAGczDN5-pWLmUUA9NT/preview" width="300" height="400"></iframe>
+                    </div> 
+                </li>
+
+                <p>MIDTERM ACTIVITIES</p>
+                <li class="activity" onclick="toggleDropdown(this)">ACTIVITY 6<span class="arrow">▶</span>
+                    <div class="dropdown">
+                        <iframe src="https://drive.google.com/file/d/1MUBcY8uguPHXwUv1nt57p3wRASfvYA6T/preview" width="300" height="400"></iframe>
+                    </div>
+                </li>
+                <li class="activity" onclick="toggleDropdown(this)">ACTIVITY 7<span class="arrow">▶</span>
+                    <div class="dropdown">
+                        <iframe src="https://drive.google.com/file/d/1C92sUCi45UqsBJ-aZln5j2n_roh8qdiM/preview" width="300" height="400"></iframe>
+                    </div>
+                </li>
+                <li class="activity" onclick="toggleDropdown(this)">ACTIVITY 8<span class="arrow">▶</span>
+                    <div class="dropdown">
+                        <iframe src="https://drive.google.com/file/d/1yQNxhHv7qdZWl8ZR6wLEaydHT_jD6GSR/preview" width="300" height="400"></iframe>
+                    </div>
+                </li>
+                <li class="activity" onclick="toggleDropdown(this)">ACTIVITY 9<span class="arrow">▶</span>
+                    <div class="dropdown">
+                        <iframe src="https://drive.google.com/file/d/1DLd7J0Fa9BC2R4Yg7bhhdRMVbQNY-Xw-/preview" width="300" height="400"></iframe>
+                    </div>
+                </li>
+                <li class="activity" onclick="toggleDropdown(this)">ACTIVITY 10<span class="arrow">▶</span>
+                    <div class="dropdown">
+                        <iframe src="https://drive.google.com/file/d/1r4FhsecsfydE7TzfIyCEKstvoOXEqoFE/preview" width="300" height="400"></iframe>
+                    </div>
+                </li>
+
+                <p>FINALS ACTIVITIES</p>
+                <li class="activity" onclick="toggleDropdown(this)">ACTIVITY 11<span class="arrow">▶</span>
+                    <div class="dropdown">
+                        <iframe src="https://drive.google.com/file/d/1rh9wVXh-zN8yDceGhd6qeiIw-3g-knIE/preview" width="300" height="400"></iframe>
+                    </div>
+                </li>
+
+                <p>EXAMINATIONS</p>
+                <li class="activity" onclick="toggleDropdown(this)">Prelim Exam <span class="arrow">▶</span>
+                    <div class="dropdown">
+                        <iframe src="https://drive.google.com/file/d/1q4jzbZGWPblurJWcqYs4bMmtA7avvjoR/preview" width="300" height="400"></iframe>
+                    </div>
+                </li>
+
+                <li class="activity" onclick="toggleDropdown(this)">Midterm Exam <span class="arrow">▶</span>
+                    <div class="dropdown">
+                        <iframe src="https://drive.google.com/file/d/1Qc_uAXh_6xI0dkyJkUAEp0AHOrWmjBjL/preview" width="300" height="400"></iframe>
+                    </div>
+                </li>
+
+                <li class="activity" onclick="toggleDropdown(this)">Finals Exam <span class="arrow">▶</span>
+                    <div class="dropdown">
+                        <iframe src="No Activity yet" width="500" height="400"></iframe>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <div class="name">Marie Pechon</div>
+            <ul class="activities">
+                <p>PRELIM ACTIVITIES</p>
+                <li class="activity" onclick="toggleDropdown(this)">ACTIVITY 1 <span class="arrow">▶</span>
+                    <div class="dropdown">
+                        <iframe src="https://drive.google.com/file/d/1EdNJkWa81DT3mzuwZ26Ycwtx34AmZ1Ch/preview" width="300" height="400"></iframe>
+                    </div>
+                </li>
+                <li class="activity" onclick="toggleDropdown(this)">ACTIVITY 2<span class="arrow">▶</span>
+                    <div class="dropdown">
+                        <iframe src="https://drive.google.com/file/d/1Kf2ycEUCLK0yveVQLuZQn-_A1FCTUcGL/preview" width="300" height="400"></iframe>
+                    </div> 
+                </li>
+                <li class="activity" onclick="toggleDropdown(this)">ACTIVITY 3<span class="arrow">▶</span>
+                    <div class="dropdown">
+                        <iframe src="https://drive.google.com/file/d/1SU3DRv1zB8H3EzcsRjH34af6iyuPBFa8/preview" width="300" height="400"></iframe>
+                    </div> 
+                </li>
+                <li class="activity" onclick="toggleDropdown(this)">ACTIVITY 4<span class="arrow">▶</span>
+                    <div class="dropdown">
+                        <iframe src="https://drive.google.com/file/d/12dF0ll225SprdMsJoAYLSWg_PHWz3Hj6/preview" width="300" height="400"></iframe>
+                    </div> 
+                </li>
+                <li class="activity" onclick="toggleDropdown(this)">ACTIVITY 5<span class="arrow">▶</span>
+                    <div class="dropdown">    
+                        <iframe src="https://drive.google.com/file/d/1v6TznxLFwNBTS4kXpGLvMPdFn9xTccym/preview" width="300" height="400"></iframe>
+                    </div> 
+                </li>
+
+                <p>MIDTERM ACTIVITIES</p>
+                <li class="activity" onclick="toggleDropdown(this)">ACTIVITY 6<span class="arrow">▶</span>
+                    <div class="dropdown">
+                        <iframe src="https://drive.google.com/file/d/1h6ewF9asjyHr393kknjHWG-sY5855YhO/preview" width="300" height="400"></iframe>
+                    </div>
+                </li>
+                <li class="activity" onclick="toggleDropdown(this)">ACTIVITY 7<span class="arrow">▶</span>
+                    <div class="dropdown">
+                        <iframe src="ttps://drive.google.com/file/d/1xuJGVyqYtJb8uDBc5eII9tjXbBGM3tKe/preview" width="300" height="400"></iframe>
+                    </div>
+                </li>
+                <li class="activity" onclick="toggleDropdown(this)">ACTIVITY 8<span class="arrow">▶</span>
+                    <div class="dropdown">
+                        <iframe src="https://drive.google.com/file/d/1CuzTdMGoh3VSPg-W6KWKi6Z8KGIa8USL/preview" width="300" height="400"></iframe>
+                    </div>
+                </li>
+                <li class="activity" onclick="toggleDropdown(this)">ACTIVITY 9<span class="arrow">▶</span>
+                    <div class="dropdown">
+                        <iframe src="https://drive.google.com/file/d/1WNpK0RONFTTMa-s_oBLYrkNeTowNqBG8/preview" width="300" height="400"></iframe>
+                    </div>
+                </li>
+                <li class="activity" onclick="toggleDropdown(this)">ACTIVITY 10<span class="arrow">▶</span>
+                    <div class="dropdown">
+                        <iframe src="https://drive.google.com/file/d/1SdErbN-3fmu4TW9wxAmoYpjUalz8237T/preview" width="300" height="400"></iframe>
+                    </div>
+                </li>
+
+                <p>FINALS ACTIVITIES</p>
+                <li class="activity" onclick="toggleDropdown(this)">ACTIVITY 11<span class="arrow">▶</span>
+                    <div class="dropdown">
+                        <iframe src="https://drive.google.com/file/d/1r39K1ypUu__TbqYGE-GGjljQQeiPFGyb/preview" width="300" height="400"></iframe>
+                    </div>
+                </li>
+
+                <p>EXAMINATIONS</p>
+                <li class="activity" onclick="toggleDropdown(this)">Prelim Exam <span class="arrow">▶</span>
+                    <div class="dropdown">
+                        <iframe src="No Activity yet" width="300" height="400"></iframe>
+                    </div>
+                </li>
+
+                <li class="activity" onclick="toggleDropdown(this)">Midterm Exam <span class="arrow">▶</span>
+                    <div class="dropdown">
+                        <iframe src="https://drive.google.com/file/d/1NNXxmXBpyYZv1wm4rPgMSWQxae7LZE48/preview" width="300" height="400"></iframe>
+                    </div>
+                </li>
+
+                <li class="activity" onclick="toggleDropdown(this)">Finals Exam <span class="arrow">▶</span>
+                    <div class="dropdown">
+                        <iframe src="No Activity yet" width="500" height="400"></iframe>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // Toggle dropdown display
+        function toggleDropdown(element) {
+            const dropdown = element.querySelector('.dropdown');
+            const arrow = element.querySelector('.arrow');
+            if (dropdown.style.display === 'block') {
+                dropdown.style.display = 'none';
+                arrow.textContent = '▶';
+            } else {
+                dropdown.style.display = 'block';
+                arrow.textContent = '▼';
+            }
+        }
+    </script>
+</body>
+</html>
