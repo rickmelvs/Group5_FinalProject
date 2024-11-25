@@ -1,0 +1,30 @@
+---
+
+- name: Creating the Docker Image for the webapp
+  hosts: servers
+  become: yes
+  tasks:
+
+  - name: Ensure Docker SDK for Python is installed
+    pip:
+      name: docker
+      state: present
+
+  - name: Start and enable Docker service
+    service:
+      name: docker
+      state: started
+      enabled: yes
+
+  - name: Copy the webapp folder into the servers
+    copy:
+      src: ~/Group5_FinalProject/webapp/Dockerfile
+      dest: ~/Group5_FinalProject/webapp/Dockerfile
+      remote_src: no
+
+  - name: Build Docker image on the servers
+    docker_image:
+      build:
+        path: ~/Group5_FinalProject/webapp/Dockerfile
+      name: webapp_image
+      tag: latest
