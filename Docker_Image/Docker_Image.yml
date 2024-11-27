@@ -16,15 +16,19 @@
       state: started
       enabled: yes
 
-  - name: Copy the webapp folder into the servers
+  - name: Copy the Docker file  into the servers
     copy:
-      src: ~/Group5_FinalProject/webapp/Dockerfile
-      dest: ~/Group5_FinalProject/webapp/Dockerfile
-      remote_src: no
+      src: /home/qjltbarquilla/Group5_FinalProject/webapp/
+      dest: /home/qjltbarquilla/Group5_FinalProject/webapp/ 
+      owner: qjltbarquilla
 
   - name: Build Docker image on the servers
     docker_image:
+      source: build
       build:
-        path: ~/Group5_FinalProject/webapp/Dockerfile
+        path: /home/qjltbarquilla/Group5_FinalProject/webapp/
+        dockerfile: Dockerfile
+        pull: yes 
       name: webapp_image
       tag: latest
+      state: present
