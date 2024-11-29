@@ -28,7 +28,7 @@
       build:
         path: /home/qjltbarquilla/Group5_FinalProject/webapp/
         dockerfile: Dockerfile
-        pull: yes 
+        pull: yes
       name: webapp_image
       tag: latest
       state: present
