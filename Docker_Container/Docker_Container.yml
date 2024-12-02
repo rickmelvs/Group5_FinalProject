@@ -5,16 +5,6 @@
   become: yes
   tasks:
 
-#    - name: Ensure Docker is installed
-#      package:
-#        name: docker
-#        state: present
-
-    - name: Ensure Nginx is installed
-      package:
-        name: nginx
-        state: present
-
     - name: Run the webapp container
       docker_container:
         name: webapp_container

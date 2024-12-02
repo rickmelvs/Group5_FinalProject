@@ -5,10 +5,22 @@
   become: yes
   tasks:
 
-#  - name: Ensure Docker SDK for Python is installed
-#    pip:
-#      name: docker
-#      state: present
+  - name: Ensure Python3 is installed
+    yum:
+      name: python3
+      state: present
+      update_cache: yes
+
+  - name: Ensure pip3 is installed
+    yum:
+      name: python3-pip
+      state: present
+
+  - name: Ensure Docker SDK for Python is installed
+    pip:
+      name: docker
+      state: present
+      executable: pip3
 
   - name: Start and enable Docker service
     service:
